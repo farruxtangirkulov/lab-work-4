@@ -1,0 +1,197 @@
+/* ============================================================
+   style.css – Lab Work 4 : Amity University
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: #1a3a6b;              /* Amity navy blue */
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+
+.brand { display: flex; align-items: center; gap: 14px; }
+
+.logo {
+    width: 52px; height: 52px;
+    border-radius: 8px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.brand h1 { font-size: 1.3rem; }
+.brand p  { font-size: .8rem; opacity: .85; }
+
+nav { display: flex; gap: 8px; }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background .25s;
+}
+
+nav a:hover  { background: rgba(255, 255, 255, .2); }
+nav a.active { background: #f5a623; color: #1a3a6b; }   /* Amity orange */
+
+/* ---------- Main layout ---------- */
+main { max-width: 900px; margin: 28px auto; padding: 0 16px; }
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.card h2, .card h3 { color: #1a3a6b; margin-bottom: 10px; }
+.card p  { margin-bottom: 12px; }
+.card ul { margin-left: 20px; }
+
+code {
+    background: #eef2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: .9em;
+}
+
+/* ---------- Iframe (Page 1) ---------- */
+.frame {
+    width: 100%;
+    height: 380px;
+    border: 3px solid #1a3a6b;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* ---------- Form (Page 2) ---------- */
+.form-group { margin-bottom: 18px; }
+
+.form-group label, .label-text {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1a3a6b;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c6cfdd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #1a3a6b;
+    box-shadow: 0 0 4px rgba(26, 58, 107, .4);
+}
+
+.radio-group { display: flex; gap: 22px; }
+.radio-group label {
+    font-weight: 400;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.buttons { display: flex; gap: 14px; margin-top: 22px; }
+
+.btn-primary, .btn-secondary {
+    padding: 10px 26px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .15s, background .2s;
+}
+
+.btn-primary   { background: #1a3a6b; color: #fff; }
+.btn-primary:hover   { background: #132a4e; transform: translateY(-1px); }
+.btn-secondary { background: #d9dee7; color: #1a3a6b; }
+.btn-secondary:hover { background: #c4cbd8; }
+
+.form-message { margin-top: 14px; font-weight: 600; }
+.form-message.success { color: #1c7a3d; }
+.form-message.error   { color: #c0392b; }
+
+/* ---------- Table (Page 3) ---------- */
+.table-wrapper { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background: #fff;
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1a3a6b;
+    padding-bottom: 10px;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e1e6ee;
+}
+
+thead th {
+    background: #1a3a6b;
+    color: #fff;
+    letter-spacing: .4px;
+}
+
+tbody tr:nth-child(even) { background: #f4f7fb; }   /* zebra stripes */
+tbody tr:hover           { background: #fdf1dc; }
+
+tbody td.loading { text-align: center; color: #888; font-style: italic; }
+
+/* Grade colours */
+.grade-a { color: #1c7a3d; font-weight: 700; }
+.grade-b { color: #b8860b; font-weight: 700; }
+.grade-d { color: #d35400; font-weight: 700; }
+.grade-f { color: #c0392b; font-weight: 700; }
+
+/* ---------- Footer ---------- */
+footer {
+    background: #1a3a6b;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-size: .85rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+    header { flex-direction: column; align-items: flex-start; }
+    .radio-group { flex-direction: column; gap: 6px; }
+}

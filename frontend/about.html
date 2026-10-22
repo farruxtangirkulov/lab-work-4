@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Lab</title>
+    <style>
+        /* Local styles – this page is shown INSIDE the iframe */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f4ff;
+            color: #222;
+            padding: 20px;
+            margin: 0;
+        }
+        h1, h3 { color: #1a3a6b; }
+        h1 { margin-top: 0; }
+        ul { margin-left: 20px; }
+        li { margin-bottom: 8px; line-height: 1.5; }
+        code { background: #fff; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>About This Lab (loaded inside a frame)</h1>
+    <p>
+        This document is displayed inside the <code>&lt;iframe&gt;</code> element of
+        <strong>index.html</strong> — proving that one HTML page can embed another page.
+    </p>
+
+    <h3>The website has three parts:</h3>
+    <ul>
+        <li><strong>Page 1 (Frame):</strong> the home page embeds this page using an iframe.</li>
+        <li><strong>Page 2 (Form):</strong> data goes to PHP (submit.php), which saves it.</li>
+        <li><strong>Page 3 (Table):</strong> data comes back from PHP (get_students.php) with CSS styling.</li>
+    </ul>
+
+</body>
+</html>
